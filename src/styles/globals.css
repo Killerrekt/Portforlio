@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  @apply bg-black;
+}
+
+.center {
+  @apply h-screen flex items-center justify-center;
+  flex-direction: column;
+}
+
+ul {
+  @apply flex;
+}
+
+li.nav {
+  @apply mr-6;
+  color: #00ff00;
+  font-family: "M PLUS 1 Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 150%;
+  @apply cursor-default;
+}
+
+li:hover {
+  @apply text-white;
+}
+
+.typewriter {
+  color: #00ff00;
+  font-family: "M PLUS 1 Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 250%;
+  @apply cursor-default;
+}
+
+.window {
+  @apply w-[400px] h-[300px] rounded-lg border flex flex-col bg-black cursor-default;
+  color: #00ff00;
+  font-family: "M PLUS 1 Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  caret-color: transparent;
+  z-index: 2;
+  user-select: none;
+}
+
+.heading {
+  @apply flex items-center p-2 border-b h-10;
+}
+
+.headingtext {
+  @apply mx-2 font-semibold;
+}
+
+.content {
+  @apply flex-1 p-2 text-sm;
+}
+
+.icon {
+  margin-left: auto;
+  height: 30px;
+  width: 30px;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+.terminal {
+  @apply text-sm text-[#00ff00];
+  font-family: "M PLUS 1 Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+}
+
+.icon:hover path {
+  fill: #ffffff;
+}
+
+img {
+  margin-left: 5%;
+  height: 40px;
+  width: 40px;
+  background-color: #00ff00;
+}
+
+li.project {
+  margin-left: 5%;
+}
