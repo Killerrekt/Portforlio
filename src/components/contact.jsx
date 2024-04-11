@@ -33,7 +33,7 @@ const Contact = forwardRef((props, ref) => {
           You can contact me through the following link :-
           <br />
           <img
-            src="./src/assets/gmail.png"
+            src="./gmail.png"
             alt="gmail logo"
             style={{ display: "inline-block" }}
           />
@@ -48,7 +48,7 @@ const Contact = forwardRef((props, ref) => {
           </span>
           <br />
           <img
-            src="./src/assets/github.png"
+            src="./github.png"
             alt="github logo"
             style={{ display: "inline-block" }}
           />
@@ -63,7 +63,7 @@ const Contact = forwardRef((props, ref) => {
           </span>
           <br />
           <img
-            src="./src/assets/link.png"
+            src="./link.png"
             alt="linkdlen logo"
             style={{ display: "inline-block" }}
           />
@@ -78,7 +78,7 @@ const Contact = forwardRef((props, ref) => {
           </span>
           <br />
           <img
-            src="./src/assets/discord.png"
+            src="./discord.png"
             alt="discord logo"
             style={{ display: "inline-block" }}
           />
