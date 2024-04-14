@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ReactTyped } from "react-typed";
 import "./App.css";
 import "./styles/globals.css";
@@ -38,14 +38,24 @@ function App() {
     "Loading Welcome............",
   ];
 
+  const [Minimum, SetMinimum] = useState(false);
+
   const handleTerminal = () => {
     SetTerminal(true);
   };
 
+  useEffect(() => {
+    if (window.innerWidth > 900 && window.innerHeight > 600) {
+      SetMinimum(true);
+    }
+  });
+
   //815 width minimum need to set
   return (
     <>
-      {typeof window === "undefined" || !Terminal ? (
+      {!Minimum ? (
+        <h1>Sorry for the inconvience the site is not ready for mobile view</h1>
+      ) : typeof window === "undefined" || !Terminal ? (
         <>
           <TerminalText textLines={lines} onTypingComplete={handleTerminal} />
         </>
