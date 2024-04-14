@@ -88,8 +88,21 @@ function NavBar() {
         return;
       }
       IsActive.current = true;
-      coords.startx = e.clientX - element.offsetLeft;
-      coords.starty = e.clientY - element.offsetTop;
+      var check;
+      try {
+        check = e.touches[0];
+        check = true;
+      } catch {
+        check = false;
+      }
+      if (check) {
+        var touch = e.touches[0];
+        coords.startx = touch.clientX - element.offsetLeft;
+        coords.starty = touch.clientY - element.offsetTop;
+      } else {
+        coords.startx = e.clientX - element.offsetLeft;
+        coords.starty = e.clientY - element.offsetTop;
+      }
     };
 
     const AboutMouseUp = (e) => {
@@ -100,26 +113,58 @@ function NavBar() {
       if (!IsActive.current) {
         return;
       }
+      var check;
+      try {
+        check = e.touches[0];
+        check = true;
+      } catch {
+        check = false;
+      }
+
       element.style.position = "absolute";
-      var nextx = e.clientX - coords.startx;
-      var nexty = e.clientY - coords.starty;
-      if (
-        nextx + 400 <= window.innerWidth &&
-        nexty + 300 <= window.innerHeight &&
-        nextx >= 0 &&
-        nexty >= 0 &&
-        e.clientX >= element.offsetLeft &&
-        e.clientY >= element.offsetTop &&
-        e.clientY <= element.offsetTop + 300 &&
-        e.clientX <= element.offsetLeft + 400
-      ) {
-        element.style.top = `${nexty}px`;
-        element.style.left = `${nextx}px`;
+
+      if (check) {
+        var touch = e.touches[0];
+        var nextx = touch.clientX - coords.startx;
+        var nexty = touch.clientY - coords.starty;
+        if (
+          nextx + 400 <= window.innerWidth &&
+          nexty + 300 <= window.innerHeight &&
+          nextx >= 0 &&
+          nexty >= 0 &&
+          touch.clientX >= element.offsetLeft &&
+          touch.clientY >= element.offsetTop &&
+          touch.clientY <= element.offsetTop + 300 &&
+          touch.clientX <= element.offsetLeft + 400
+        ) {
+          element.style.top = `${nexty}px`;
+          element.style.left = `${nextx}px`;
+        }
+      } else {
+        var nextx = e.clientX - coords.startx;
+        var nexty = e.clientY - coords.starty;
+        if (
+          nextx + 400 <= window.innerWidth &&
+          nexty + 300 <= window.innerHeight &&
+          nextx >= 0 &&
+          nexty >= 0 &&
+          e.clientX >= element.offsetLeft &&
+          e.clientY >= element.offsetTop &&
+          e.clientY <= element.offsetTop + 300 &&
+          e.clientX <= element.offsetLeft + 400
+        ) {
+          element.style.top = `${nexty}px`;
+          element.style.left = `${nextx}px`;
+        }
       }
     };
 
     element.addEventListener("mousedown", AboutMouseDown);
     element.addEventListener("mouseup", AboutMouseUp);
+    element.addEventListener("touchstart", AboutMouseDown);
+    element.addEventListener("touchend", AboutMouseUp);
+    window.addEventListener("touchmove", AboutMouseMove);
+    window.addEventListener("touchcancel", AboutMouseUp);
     window.addEventListener("mousemove", AboutMouseMove);
 
     return () => {

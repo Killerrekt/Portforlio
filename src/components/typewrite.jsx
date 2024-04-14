@@ -7,11 +7,11 @@ const TypeWriter = () => (
       strings={[
         "Aka_killerrekt",
         "Backend_developer",
-        "Age-19",
-        "good_team_player",
-        "passionate_learner",
-        "competitive",
-        "pushing_myself",
+        "Age_19",
+        "Team_player",
+        "Passionate_learner",
+        "Competitive",
+        "Pushing_myself",
       ]}
       typeSpeed={100}
       loop
