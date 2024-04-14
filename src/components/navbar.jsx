@@ -70,7 +70,7 @@ function NavBar() {
       if (projectRef.current) element = projectRef.current;
     }
 
-    const AboutMouseDown = (e) => {
+    const MouseDown = (e) => {
       if (
         e.clientX >= element.offsetLeft + 360 &&
         e.clientX <= element.offsetLeft + 390 &&
@@ -105,11 +105,11 @@ function NavBar() {
       }
     };
 
-    const AboutMouseUp = (e) => {
+    const MouseUp = (e) => {
       IsActive.current = false;
     };
 
-    const AboutMouseMove = (e) => {
+    const MouseMove = (e) => {
       if (!IsActive.current) {
         return;
       }
@@ -159,18 +159,22 @@ function NavBar() {
       }
     };
 
-    element.addEventListener("mousedown", AboutMouseDown);
-    element.addEventListener("mouseup", AboutMouseUp);
-    element.addEventListener("touchstart", AboutMouseDown);
-    element.addEventListener("touchend", AboutMouseUp);
-    window.addEventListener("touchmove", AboutMouseMove);
-    window.addEventListener("touchcancel", AboutMouseUp);
-    window.addEventListener("mousemove", AboutMouseMove);
+    element.addEventListener("mousedown", MouseDown);
+    element.addEventListener("mouseup", MouseUp);
+    element.addEventListener("touchstart", MouseDown);
+    element.addEventListener("touchend", MouseUp);
+    window.addEventListener("touchmove", MouseMove);
+    window.addEventListener("touchcancel", MouseUp);
+    window.addEventListener("mousemove", MouseMove);
 
     return () => {
-      element.removeEventListener("mousedown", AboutMouseDown);
-      element.removeEventListener("mouseup", AboutMouseUp);
-      window.addEventListener("mousemove", AboutMouseMove);
+      element.removeEventListener("mousedown", MouseDown);
+      element.removeEventListener("mouseup", MouseUp);
+      element.removeEventListener("touchstart", MouseDown);
+      element.removeEventListener("touchend", MouseUp);
+      window.removeEventListener("touchmove", MouseMove);
+      window.removeEventListener("touchcancel", MouseUp);
+      window.addEventListener("mousemove", MouseMove);
     };
   }, [AboutClicked, ProjectClicked, ContactClicked, SkillClicked]);
 
