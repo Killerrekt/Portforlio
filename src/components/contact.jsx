@@ -32,65 +32,77 @@ const Contact = forwardRef((props, ref) => {
         <div className="content">
           You can contact me through the following link :-
           <br />
-          <img
-            src="./gmail.png"
-            alt="gmail logo"
-            style={{ display: "inline-block" }}
-          />
-          <span
-            style={{
-              display: "inline-block",
-              marginLeft: "5%",
-              height: "40px",
-            }}
-          >
-            amankhanter14@gmail.com
-          </span>
           <br />
-          <img
-            src="./github.png"
-            alt="github logo"
-            style={{ display: "inline-block" }}
-          />
-          <span
-            style={{
-              display: "inline-block",
-              marginLeft: "5%",
-              height: "40px",
-            }}
-          >
-            /Killerrekt
-          </span>
+          <a href="mailto:amankhanter14@gmail.com" target="_blank">
+            <img
+              src="./gmail.png"
+              alt="gmail logo"
+              style={{ display: "inline-block" }}
+            />
+            <span
+              style={{
+                display: "inline-block",
+                marginLeft: "2%",
+                height: "40px",
+              }}
+            >
+              amankhanter14@gmail.com
+            </span>
+          </a>
           <br />
-          <img
-            src="./link.png"
-            alt="linkdlen logo"
-            style={{ display: "inline-block" }}
-          />
-          <span
-            style={{
-              display: "inline-block",
-              marginLeft: "5%",
-              height: "40px",
-            }}
-          >
-            /Aman_L
-          </span>
+          <a href="https://github.com/Killerrekt" target="_blank">
+            <img
+              src="./github.png"
+              alt="github logo"
+              style={{ display: "inline-block" }}
+            />
+            <span
+              style={{
+                display: "inline-block",
+                marginLeft: "2%",
+                height: "40px",
+              }}
+            >
+              /Killerrekt
+            </span>
+          </a>
           <br />
-          <img
-            src="./discord.png"
-            alt="discord logo"
-            style={{ display: "inline-block" }}
-          />
-          <span
-            style={{
-              display: "inline-block",
-              marginLeft: "5%",
-              height: "40px",
-            }}
+          <a href="https://linkedin.com/in/aman-l-922819251/" target="_blank">
+            <img
+              src="./link.png"
+              alt="linkdlen logo"
+              style={{ display: "inline-block" }}
+            />
+            <span
+              style={{
+                display: "inline-block",
+                marginLeft: "2%",
+                height: "40px",
+              }}
+            >
+              /Aman_L
+            </span>
+          </a>
+          <br />
+          <a
+            href="https://discord.com/users/690967070589976718"
+            target="_blank"
           >
-            Killerrekt
-          </span>
+            <img
+              src="./discord.png"
+              alt="discord logo"
+              style={{ display: "inline-block" }}
+            />
+            <span
+              style={{
+                display: "inline-block",
+                marginLeft: "2%",
+                height: "40px",
+              }}
+            >
+              Killerrekt
+            </span>
+          </a>
           <br />
         </div>
       </div>

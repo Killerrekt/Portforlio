@@ -30,25 +30,44 @@ const Project = forwardRef((props, ref) => {
           </div>
         </div>
         <div className="content">
-          Here are the list of projects that I have worked on :-
-          <br />
-          <br />
           <ol>
-            <li className="project">
-              DEVSOC'24 Backend (Go[Echo] + Postgres[SQL] )
-            </li>
-            <li className="project">
-              BOLT Backend (Go[Fiber] + Postgres[GORM])
-            </li>
-            <li className="project">
-              IC-ETITE Admin Portal (Go[Fiber] + MongoDB)
-            </li>
-            <li className="project">
-              COOK-OFF 8.0 Backend (Node[Express] + MongoDB)
-            </li>
-            <li className="project">
-              E-Commerce Backend (Go[Fiber] + Postgres[SQLX])
-            </li>
+            <a
+              href="https://github.com/Killerrekt/devsoc-backend-24"
+              target="_blank"
+            >
+              <li className="project">
+                DEVSOC'24 Backend (Go[Echo] + Postgres[SQL] )
+              </li>
+            </a>
+            <a
+              href="https://github.com/Killerrekt/bolt-backend"
+              target="_blank"
+            >
+              <li className="project">
+                BOLT Backend (Go[Fiber] + Postgres[GORM])
+              </li>
+            </a>
+            <a herf="https://github.com/Killerrekt/conference" target="_blank">
+              <li className="project">
+                IC-ETITE Admin Portal (Go[Fiber] + MongoDB)
+              </li>
+            </a>
+            <a
+              herf="https://github.com/killerrekt/cookoff-backend"
+              target="_blank"
+            >
+              <li className="project">
+                COOK-OFF 8.0 Backend (Node[Express] + MongoDB)
+              </li>
+            </a>
+            <a
+              href="https://github.com/Killerrekt/ecommerce-be"
+              target="_blank"
+            >
+              <li className="project">
+                E-Commerce Backend (Go[Fiber] + Postgres[SQLX])
+              </li>
+            </a>
           </ol>
           <br />
           <div>

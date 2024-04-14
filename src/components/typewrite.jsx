@@ -9,6 +9,9 @@ const TypeWriter = () => (
         "Backend_developer",
         "Age-19",
         "good_team_player",
+        "passionate_learner",
+        "competitive",
+        "pushing_myself",
       ]}
       typeSpeed={100}
       loop
