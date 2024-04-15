@@ -43,13 +43,13 @@ const Project = forwardRef((props, ref) => {
               BOLT Backend (Go[Fiber] + Postgres[GORM])
             </li>
           </a>
-          <a herf="https://github.com/Killerrekt/conference/" target="_blank">
+          <a href="https://github.com/Killerrekt/conference/" target="_blank">
             <li className="project">
               IC-ETITE Admin Portal (Go[Fiber] + MongoDB)
             </li>
           </a>
           <a
-            herf="https://github.com/killerrekt/cookoff-backend"
+            href="https://github.com/killerrekt/cookoff-backend"
             target="_blank"
           >
             <li className="project">
